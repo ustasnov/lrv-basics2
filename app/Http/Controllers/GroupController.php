@@ -23,7 +23,7 @@ class GroupController extends Controller
      */
     public function create()
     {
-        //
+        return view('group.create', []);
     }
 
     /**
@@ -39,7 +39,7 @@ class GroupController extends Controller
 
         $group->save();
 
-        return redirect('/group');
+        return redirect('/groups');
     }
 
     /**
