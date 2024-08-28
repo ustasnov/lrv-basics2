@@ -9,6 +9,17 @@
 </head>
 <body>
   <div class="group-form-container">
+
+    @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+    </div>
+    @endif
+
     <h2 class="form-title">Новая группа</h2>
     <form class="group-create-form" method="POST" action="/groups">
       @csrf

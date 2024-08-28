@@ -30,12 +30,17 @@ class GroupController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
+    {   
+        $validated = $request->validate([
+            'title' => 'required',
+            'start_from' => 'required',
+        ]);
+
         $group = new Group;
 
         $group->title = $request->title;
         $group->start_from = $request->start_from;
-        $group->is_active = $request->is_active;
+        $group->is_active = empty($request->is_active) ? false : $request->is_active;
 
         $group->save();
 

@@ -3,6 +3,11 @@ body {
   font-size: 14pt;
 }
 
+.alert-danger {
+  color: red;
+  font-size: 12pt;
+}
+
 .main-container {
   width: 100vw;
   height: 100vh;
