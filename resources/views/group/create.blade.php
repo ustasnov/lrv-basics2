@@ -12,12 +12,12 @@
 
     @if ($errors->any())
       <div class="alert alert-danger">
-        <ul>
+        <ul class="alert-list">
           @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
           @endforeach
         </ul>
-    </div>
+      </div>
     @endif
 
     <h2 class="form-title">Новая группа</h2>
@@ -25,11 +25,11 @@
       @csrf
       <div class="form-input form-input-text">
         <label for="title">Наименование:</label>
-        <input type="text" id="title" name="title"/>
+        <input class="input-field" type="text" id="title" name="title" value="{{ old('title') }}"/>
       </div>
       <div class="form-input form-input-text">
         <label for="start_from">Дата начала обучения:</label>
-        <input type="text" id="start_from" name="start_from" />
+        <input class="input-field" type="text" id="start_from" name="start_from" value="{{ old('start_from') }}"/>
       </div>
       <div class="form-input form-input-checkbox">
         <label for="active_group">Активная</label>

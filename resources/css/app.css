@@ -4,8 +4,17 @@ body {
 }
 
 .alert-danger {
-  color: red;
-  font-size: 12pt;
+  width: 430px;
+}
+
+.alert-list {
+  color: white;
+  background-color: brown;
+  color: rgb(255, 255, 198);
+  font-size: 13pt;
+  list-style-type: none;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .main-container {
@@ -47,7 +56,7 @@ body {
 }
 
 .group-form-container {
-  width: 400px;
+  width: 450px;
   display: flex;
   flex-direction: column;
   margin: 50px 40px;
@@ -59,10 +68,9 @@ body {
 }
 
 .group-create-form {
-  width: 380px;
+  width: 430px;
   display: flex;
   flex-direction: column;
-  align-items: left;
   color: rgb(80, 80, 80);
 }
 
@@ -74,6 +82,12 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+}
+
+.input-field {
+  width: 200px;
+  font-size: 14pt;
+  padding: 2px 5px;
 }
 
 .form-input-checkbox {
