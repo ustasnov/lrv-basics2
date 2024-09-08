@@ -13,19 +13,19 @@ class GroupSeeder extends Seeder
   public function run(): void
   {
     DB::table('group')->insert([
-        'title' => 'Группа Е1',
-        'start_from' => '2024-08-25',
+        'title' => 'Е1',
+        'start_from' => '2022-08-24',
         'is_active' => false,
     ]);
     DB::table('group')->insert([
-        'title' => 'Группа Е2',
-        'start_from' => '2024-08-26',
+        'title' => 'Е2',
+        'start_from' => '2023-08-25',
         'is_active' => true,
     ]);
 
     DB::table('group')->insert([
-        'title' => 'Группа Е3',
-        'start_from' => '2024-08-27',
+        'title' => 'Е3',
+        'start_from' => '2024-08-24',
         'is_active' => true,
     ]);
   }

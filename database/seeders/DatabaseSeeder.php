@@ -24,5 +24,9 @@ class DatabaseSeeder extends Seeder
             GroupSeeder::class,
         ]);
 
+        $this->call([
+            StudentSeeder::class,
+        ]);
+
     }
 }

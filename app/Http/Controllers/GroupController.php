@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Group;
+use App\Models\Stident;
 use Illuminate\Http\Request;
 
 class GroupController extends Controller
@@ -35,7 +36,7 @@ class GroupController extends Controller
             'title' => 'required',
             'start_from' => 'required',
         ]);
-
+        
         $group = new Group;
 
         $group->title = $request->title;
@@ -50,9 +51,15 @@ class GroupController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Group $group)
+    public function show(string $id)
     {
-        //
+        $group = Group::find($id);
+        $students = $group->students;
+
+        return view('group.item', [
+            'group' => $group,
+            'students' => $students
+        ]);
     }
 
     /**

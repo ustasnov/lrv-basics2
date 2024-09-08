@@ -181,6 +181,12 @@ return [
         ],
         'start_from' => [
             'required' => 'Поле :attribute надо заполнить',
+        ],
+        'surname' => [
+            'required' => 'Поле :attribute надо заполнить',
+        ],
+        'name' => [
+            'required' => 'Поле :attribute надо заполнить',
         ]
     ],
 
@@ -197,7 +203,9 @@ return [
 
     'attributes' => [
         'title' => 'Наименование',
-        'start_from' => 'Дата начала обучения'
+        'start_from' => 'Дата начала обучения',
+        'surname' => 'Фамилия',
+        'name' => 'Имя',
     ],
 
 ];

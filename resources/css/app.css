@@ -17,6 +17,17 @@ body {
   border-radius: 10px;
 }
 
+.btn {
+  font-size: 16pt;
+  text-align: right;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #4c8080;
+  border: 1px solid #4c8080;
+  border-radius: 8px;
+  color: rgb(245, 245, 245);
+}
+
 .main-container {
   width: 100vw;
   height: 100vh;
@@ -27,7 +38,7 @@ body {
 }
 
 .groups-title {
-  width: 550px;
+  width: 600px;
   height: 30px;
   display: flex;
   margin: 50px 0 30px 40px;
@@ -36,23 +47,38 @@ body {
   color: rgb(80, 80, 80);
 }
 
-.groups-create-link {
-  font-size: 16pt;
-  text-align: right;
-  text-decoration: none;
-  padding: 5px;
-  color: blueviolet;
-  outline: solid blueviolet;
+.groups {
+  width: 600px;
+  list-style-type: none;
+  margin-bottom: 30px;
 }
 
-.groups {
-  list-style-type: none;
+.groups-header {
+  width: 600px;
+  display: flex;
+  margin: 0 0 10px 40px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(80, 80, 80);
+  font-size: 14pt;
+  font-weight: 700;
+  border-bottom: 1px solid rgb(80, 80, 80);
 }
 
 .group-item {
+  width: 600px;
+  display: flex;
+  padding-bottom: 5px;
+  justify-content: space-between;
   color: rgb(80, 80, 80);
   font-size: 16pt;
   margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.group-attr {
+  width: 150px;
 }
 
 .group-form-container {
@@ -115,4 +141,32 @@ body {
 
 .reset-button:hover {
   background-color: rgb(230, 230, 230);
+}
+
+.group-name {
+  font-size: 18pt;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.group-details {
+  font-size: 14pt;
+}
+
+.back-to-list {
+  margin: 10px 0 0 40px;
+}
+
+.student-attr-list {
+  width: 600px;
+  font-size: 16pt;
+  list-style-type: none;
+}
+
+.student-list-item {
+  margin-bottom: 5px;
+}
+
+.student-list-item:last-child {
+  margin-bottom: 35px;
 }

@@ -9,14 +9,25 @@
 </head>
 <body>
   <div class="groups-title">
-    <h2>{{$title}}</h2>
-    <a href="{{ url('/groups/create') }}" class="groups-create-link">Добавить группу</a>
+    <h2>{{ $title }}</h2>
+    <a href="{{ url('/groups/create') }}" class="btn groups-create-link">Добавить группу</a>
   </div>
   @foreach ($groups as $group)
     @if ($loop->first)
+      <div class='groups-header'>
+        <div class="group-attr">Наименование</div>
+        <div class="group-attr">Создана</div>
+        <div class="group-attr">Действующая</div>
+      </div>
       <ul class="groups">
     @endif      
-      <li class="group-item">{{ $group->title }}, начало обучения: {{ $group->start_from}}, активная: {{$group->is_active ? 'Да' : 'Нет'}}</ui>
+      <li>
+        <a class="group-item" href="{{ url('/groups/' . $group->id) }}">
+          <div class="group-attr">{{ $group->title }}</div>
+          <div class="group-attr">{{ $group->start_from}}</div>
+          <div class="group-attr">{{$group->is_active ? 'Да' : 'Нет'}}</div>
+        </a>
+      </ui>
     @if ($loop->last)
         </ul>
     @endif      
