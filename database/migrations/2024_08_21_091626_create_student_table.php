@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('student', function (Blueprint $table) {
             $table->id();
-            $table->integer('group_id');
+            $table->integer('group_id')->unsigned();
             $table->string('surname', 100);
             $table->string('name', 100);
-            $table->timestamps();
+            $table->timestamps();   
+            $table->foreign('group_id')->references('id')->on('group');
         });
     }
 

@@ -41,7 +41,8 @@ class GroupController extends Controller
 
         $group->title = $request->title;
         $group->start_from = $request->start_from;
-        $group->is_active = empty($request->is_active) ? false : $request->is_active;
+        //$group->is_active = empty($request->is_active) ? false : $request->is_active;
+        $group->is_active = !empty($request->is_active);
 
         $group->save();
 

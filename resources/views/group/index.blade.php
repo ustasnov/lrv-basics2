@@ -24,7 +24,7 @@
       <li>
         <a class="group-item" href="{{ url('/groups/' . $group->id) }}">
           <div class="group-attr">{{ $group->title }}</div>
-          <div class="group-attr">{{ $group->start_from}}</div>
+          <div class="group-attr">{{ date('d.m.Y', strtotime($group->start_from))}}</div>
           <div class="group-attr">{{$group->is_active ? 'Да' : 'Нет'}}</div>
         </a>
       </ui>
